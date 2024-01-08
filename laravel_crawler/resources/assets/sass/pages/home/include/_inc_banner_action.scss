@@ -1,0 +1,106 @@
+.banner-action {
+    padding-top: 15px;
+
+    .b-banner-action {
+        .b-banner {
+            flex: 0 0 70%;
+            max-width: 70%;
+            width: 70%;
+            margin-right: 30px;
+        }
+        .lists {
+            display: flex;
+            flex-wrap: wrap;
+            .item {
+                width: calc(100%/3);
+                padding: 7px;
+                text-align: center;
+                border: 1px solid #f2f2f2;
+                margin-left: -1px;
+                margin-top: -1px;
+                font-weight: 600;
+                a {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+        .b-action {
+            flex-grow: 1;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            padding:10px;
+
+            > h3 {
+                text-align: center;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            .action-box {
+                > ul {
+                    > li {
+                        padding: 2px 15px;
+                        line-height: 20px;
+                        margin: 10px 0;
+                        border-left: 1px solid #dedede;
+                        .lnk-green {
+                            color: $color_sky_blue;
+                            font-weight: bold;
+                        }
+
+                        .lnk-orange {
+                            color: #fb236a;
+                        }
+                        position: relative;
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            font-family: FontAwesome;
+                            border-radius: 50%;
+                            left: -3px;
+                            top: 50%;
+                            font-size: 8px;
+                            transform: translateY(-50%);
+                            color: #dedede;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner-action {
+        .b-banner-action {
+            .b-banner {
+                margin-right: 10px;
+                flex: 0 0 60%;
+                width: 60%;
+                max-width: 60%;
+            }
+
+            .b-action {
+
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-action {
+        .b-banner-action {
+            .b-banner {
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .b-action {
+                display: none;
+            }
+        }
+    }
+}

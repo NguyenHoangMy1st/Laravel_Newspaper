@@ -1,0 +1,29 @@
+footer {
+    border-top: 1px solid #dedede;
+    margin-top: 20px;
+    padding: 15px;
+    .logo {
+        font-size: 20px;
+    }
+    .left {
+        width: 75%;
+    }
+    .right {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 0;
+        >div {
+            flex-direction: column;
+        }
+        .left {
+            width: 100%;
+        }
+        .right {
+            width: 100%;
+        }
+    }
+}

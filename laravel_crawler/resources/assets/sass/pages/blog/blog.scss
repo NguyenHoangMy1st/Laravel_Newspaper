@@ -1,0 +1,69 @@
+// Base
+
+@import "./../../../bases/autoload";
+//@import "./../../components/inc_header";
+@import "./../../components/inc_lists";
+@import "./../../components/header/inc_navbar";
+@import "./../../components/header/inc_header_blog";
+
+// Plugin
+
+@import "../../../library/icon/line-awesome/scss/line-awesome";
+.box-content {
+    display: flex;
+    .box-left{
+        flex: 0 0 70%;
+        padding-right: 70px;
+    }
+    .box-right{
+        flex: 0 0 30%;
+    }
+}
+
+@media (max-width: 767px) {
+    .box-content {
+        flex-direction: column;
+        .box-left{
+            flex: 0 0 100%;
+            padding-right: 0;
+        }
+        .box-right{
+            flex: 0 0 100%;
+        }
+    }
+}
+.breadcrumb {
+    max-width: 800px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 15px;
+    &-menu {
+        overflow-x: auto;
+        visibility: visible;
+        li {
+            display: inline-block;
+            color: #888;
+            position: relative;
+            a {
+                color: #666;
+                font-size: 13px;
+                //position: relative;
+                //&:after{
+                //
+                //}
+            }
+            &:not(:last-child):after{
+                content: "\BB";
+                display: inline-block;
+                padding-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+@import "include/inc_list_article";
+@import "include/inc_detail_article";
+@import "./../../components/inc_footer";
+@import "./../../components/inc_pagination";
+@import "./../../components/loading/inc_loading_v1";

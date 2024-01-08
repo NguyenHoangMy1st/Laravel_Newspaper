@@ -1,0 +1,102 @@
+.section-title {
+    padding: 10px 0;
+    font-weight: bold;
+    h3 {
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+}
+.lists {
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+        text-align: center;
+        .box {
+            padding: 10px;
+            border: 1px solid #f2f2f2;
+            margin-left: -1px;
+            margin-top: -1px;
+            &-info {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 52px;
+                line-height: 25px;
+                font-size: 13px;
+                display: block;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.6);
+                h4 {
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                }
+                p {
+                    margin: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 5px;
+                }
+            }
+            &.pd0 {
+                padding: 0;
+            }
+        }
+        &-title {
+            margin: 15px 0 10px;
+            line-height: 1.5;
+            font-size: 15px;
+            overflow: hidden;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            color: #333;
+            min-height: 36px;
+        }
+        &-avatar {
+            img {
+                height: 250px;
+            }
+        }
+    }
+    .item-5 {
+        width: (100% / 5);
+    }
+    .info {
+        &-item {
+            margin-bottom: 0;
+            span{
+                font-size: 13px;
+                color: rgb(138, 138, 143);
+                font-weight: 400;
+            }
+        }
+        &-auth{
+            color: #fb226a;
+            font-size: 13px;
+            font-weight: 500;
+        }
+    }
+}
+@media (min-width: 541px) and (max-width: 768px) {
+    .lists {
+        .item-5 {
+            width: (100% / 3);
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .lists {
+        .item-5 {
+            width: (100% / 2);
+        }
+    }
+}

@@ -1,0 +1,46 @@
+$la-font-path: "/fonts" !default;
+$la-font-size-base: 16px !default;
+$la-line-height-base: 1 !default;
+$la-css-prefix: la !default;
+$la-border-color: #eee !default;
+$la-inverse: #fff !default;
+$la-li-width: (20em / 16) !default;
+$la-font-name: "LineAwesome" !default;
+$la-version: "1.1.";
+
+@function la-content($la-var) {
+    @return unquote("\"#{ $la-var }\"");
+  }
+$la-search: \f2eb;
+$la-arrow-circle-right: \f11d;
+$la-bookmark-o: \f150;
+$la-heart-o: \f234;
+$la-download: \f1bd;
+$la-money: \f294;
+$la-object-group: \f29d;
+$la-clock-o: \f18f;
+$la-file-text-o: \f1ed;
+$la-file-code-o: \f1e2;
+
+$la-times: \f342;
+$la-home: \f237;
+
+$la-plus-circle: \f2c3;
+$la-bars: \f131;
+$la-list-alt: \f26d;
+$la-user: \f364;
+$la-list: \f26c;
+$la-angle-double-right: \f10e;
+$la-angle-right: \f112;
+$la-angle-double-left: \f10d;
+$la-bars: \f131;
+$la-angle-double-down: \f10c;
+$la-check: \f17b;
+$la-eye: \f1d4;
+$la-comment: \f19d;
+
+
+
+
+
+

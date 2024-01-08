@@ -1,0 +1,56 @@
+.career {
+  color: #333;
+  a {
+    text-decoration: none;
+  }
+  &__title {
+    h2 {
+      font-size: 14px !important;
+      text-align: left;
+      color: #6F6F6F;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    .career-hot-item {
+      width: calc(100% / 4);
+      padding: 7px;
+      text-align: center;
+      border: 1px solid #f2f2f2;
+      margin-left: -1px;
+      margin-top: -1px;
+      font-weight: 600;
+      img {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        -o-object-fit: contain;
+        object-fit: contain;
+      }
+      p {
+        color: #333;
+        font-size: 14px;
+        line-height: 15px;
+        margin-bottom: 0;
+        background: #f2f2f2;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .career{
+    &__content{
+      .career-hot-item {
+        width: calc(100% / 3);
+        border: none;
+        font-weight: 400;
+      }
+    }
+  }
+}

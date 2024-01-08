@@ -1,0 +1,158 @@
+.lists-sources-auth {
+    display: flex;
+    flex-wrap: wrap;
+
+    .col-item-4 {
+        flex: 1 1 25%;
+        max-width: 25%;
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+
+        .item-source {
+            border: 1px solid $color_border_f2;
+            border-radius: 5px;
+
+            &__thumb {
+                > a {
+                    > img {
+                        width: 100%;
+                        transform: scale(1, 1);
+                        margin: 0 auto;
+                        border: 1px solid #e2d8c7;
+                        border-radius: 3px;
+                        max-height: 180px;
+                    }
+                }
+            }
+
+            &__details {
+                padding: 5px 15px 15px 15px;
+
+                .info {
+                    border-radius: 3px;
+                    width: 100%;
+                    max-width: 100%;
+                    font-size: 13px;
+                    text-align: center;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: space-between;
+                    color: #666;
+                }
+
+                .rate {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 5px;
+
+                    .star-score {
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+
+                    .star-count {
+                        color: $color_666;
+                    }
+
+                    .star-review {
+                        margin-right: 15px;
+                    }
+
+                    .star-static {
+                        .star-score {
+                            font-weight: bold;
+                            font-size: 16px;
+                            padding-right: 5px;
+                        }
+
+                        .star-count {
+                            color: $color_666;
+                        }
+                    }
+                }
+
+                .source-name {
+                    margin-top: 5px;
+                    font-weight: bold;
+                    height: 44px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    > a {
+                        font-size: 15px;
+                    }
+                }
+
+                .author {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 5px;
+
+                    > img {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 30px;
+                        margin-right: 15px;
+                    }
+                }
+
+                .price {
+                    text-align: right;
+
+                    &__discount {
+                        color: $color_666;
+                        font-size: 13px;
+                        text-decoration: line-through;
+                        padding-right: 10px;
+                    }
+
+                    &__now {
+                        font-weight: bold;
+                        font-size: 15px;
+                        color: $color_sky_blue;
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .lists-sources-auth {
+        .col-item-4 {
+            flex: 1 1 33.33%;
+            max-width: 33.33%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .lists-sources-auth {
+        .col-item-4 {
+            flex: 1 1 50%;
+            max-width: 50%;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .lists-sources-auth {
+        .col-item-4 {
+            .item-source {
+                &__details {
+                    .rate {
+                        align-items: unset;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.navbar {
+    &-menu {
+        &__list {
+            width: 100%;
+            transition: 0.5s all;
+            display: flex;
+            //justify-content: space-between;
+        }
+        &__item {
+            padding: 10px 35px 10px 0;
+            position: relative;
+            .dropdown {
+                padding: 10px;
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                background-color: #fff;
+                box-shadow: 0 1px 20px rgba(0,0,0,0.1);
+                width: 500px;
+                flex-wrap: wrap;
+                opacity: 0;
+                transform-origin: center top 0;
+                transform: scale(1,0);
+                transition: all 0.2s ease-in-out;
+                &__item {
+                    flex: 0 0 50%;
+                    padding: 7px 15px;
+                    a {
+                        color: #484848;
+                    }
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: -5px;
+                    left: 40px;
+                    width: 10px;
+                    height: 10px;
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    background-color: #fff;
+                }
+            }
+            .other-dropdown {
+                width: 250px;
+                flex-direction: column;
+                right: 0;
+                left: auto;
+                &::after {
+                    right: 20px;
+                    left: auto;
+                }
+            }
+            &:hover {
+                //background-color: #f2f2f2;
+                .dropdown {
+                    opacity: 1;
+                    transform: scale(1);
+                    z-index: 5;
+                }
+            }
+        }
+        &__item:not(:last-child) {
+            margin-right: 15px;
+            //padding : 5px 15px;
+        }
+        &__item:last-child {
+            .dropdown {
+                width: 250px;
+
+                &__item {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+    &-direction {
+        //display: none;
+        flex: 0 0 auto;
+        cursor: pointer;
+        i {
+            font-size: 25px;
+            color: #f2f2f2;
+        }
+    }
+    &-pre {
+        display: none;
+        margin-right: 30px;
+    }
+    &-next {
+        margin-left: 30px;
+    }
+    a {
+        color: #333;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+}

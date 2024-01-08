@@ -1,0 +1,164 @@
+// Base
+
+@import "./../../../bases/autoload";
+@import "./../../components/inc_header";
+@import "./../../components/inc_lists";
+@import "~owl.carousel";
+// Plugin
+//@import "../../../library/icon/font-awesome/scss/font-awesome";
+@import "../../../library/icon/line-awesome/scss/line-awesome";
+.owl-carousel{
+    display: block;
+    .owl-theme .owl-nav {
+        margin-top: 0;
+    }
+}
+
+.owl-custom {
+    .owl-nav {
+        button.owl-prev, button.owl-next {
+            color: #666;
+            background-color: #dedede;
+            font-family: "FontAwesome";
+            font-weight: 900;
+            height: 30px;
+            left: 0;
+            position: absolute;
+            top: 50%;
+            font-size: 25px;
+            width: 30px;
+            transform: translateY(-50%);
+            span {
+                line-height: 30px;
+                display: block;
+            }
+        }
+
+        button.owl-next {
+            left: inherit;
+            right: 0;
+        }
+    }
+}
+
+.box-banner {
+    display: flex;
+    .left
+    {
+        width: calc(100% - 300px);
+    }
+    .right {
+        margin-left: 15px;
+        width: 300px;
+        padding: 10px;
+        .tab-nav {
+            display: flex;
+            justify-content: space-between;
+            a {
+                list-style: none;
+                width: 33.333333333333%;
+                height: 42px;
+                border-top: none;
+                padding: 0;
+                display: block;
+                background: #ecf0f1;
+                color: #333;
+                text-align: center;
+                font-size: 15px;
+                line-height: 40px;
+                border-top: 2px solid #ECF0F1;
+                &.active {
+                    border-top: 2px solid #007bff !important;
+                    border-right: 1px solid #ddd;
+                    border-left: 1px solid #ddd;
+                    background: #f9f9f9;
+                }
+            }
+        }
+        .tab-list {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                li {
+                    border-bottom: 1px solid #EAEAEA;
+                    border-top: none;
+                    width: 100%;
+                    padding-top: 10px;
+                    .number {
+                        float: left;
+                        width: 40px;
+                        line-height: 45px;
+                        text-align: center;
+                        display: block;
+                        color: #3b3b3b;
+                        font-size: 18px;
+                    }
+                    .item-content {
+                        width: 100%;
+                        .avatar {
+                            width: 55px;
+                            height: 45px;
+                            float: left;
+                            margin-right: 10px;
+                            overflow: hidden;
+                        }
+                        .title {
+                            font-size: 14px;
+                            font-weight: 400;
+                            margin: 0;
+                            margin-bottom: 5px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            a {
+                                font-weight: 500;
+                                color: #212121;
+                            }
+                        }
+                        .chapter {
+                            .view {
+                                display: block;
+                                font-style: italic;
+                                font-size: 12px;
+                                color: #666;
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 541px) and (max-width: 768px) {
+    .box-banner {
+        display: flex;
+
+        .left {
+            width: calc(100% - 300px);
+        }
+
+        .right {
+
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .box-banner {
+        flex-direction: column;
+        .left {
+            width: 100%;
+        }
+
+        .right {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+}
+
+@import "./../../components/inc_footer";
+@import "./../../components/inc_pagination";
+@import "./../../components/loading/inc_loading_v1";
